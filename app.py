@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hi():
-    return f"Hi from {os.environ.get('HI_VALUE', 'stranger')}"
+    return f"Hi from {os.environ.get('HI_VALUE', 'stranger')}\n"
 
 
 if __name__ == '__main__':

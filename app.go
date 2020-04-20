@@ -10,7 +10,7 @@ func main() {
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "Hi from "+getEnv("HI_VALUE","stranger"))
+		c.String(http.StatusOK, "Hi from "+getEnv("HI_VALUE","stranger")+"\n")
 	})
 
 	_ = r.Run("0.0.0.0:"+getEnv("HI_PORT","5000"))
