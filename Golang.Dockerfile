@@ -19,6 +19,6 @@ ENV GID=$USER_UID
 
 RUN addgroup -g ${GID} -S ${USERNAME}
 RUN adduser -S ${USERNAME} -G ${USERNAME} -u ${USER_UID}
-USER ${USERNAME}
+USER ${USER_UID}
 COPY --from=builder /project/app .
 CMD ["./app"]
